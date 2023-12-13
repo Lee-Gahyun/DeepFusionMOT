@@ -3,26 +3,19 @@
 This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object Tracking Framework Based on Camera-LiDAR Fusion with Deep Association](https://arxiv.org/abs/2202.12100) "
 
 
-![HOTA-FPS](https://github.com/wangxiyang2022/DeepFusionMOT/raw/master/assets/HOTA_FPS.jpg)
-
-
-## DeepFusionMOT
-![Framework](https://github.com/wangxiyang2022/DeepFusionMOT/raw/master/assets/Framework.jpg)
-
-
 ### Video examples on benchmarks dataset
 
 ![Video examples](https://github.com/wangxiyang2022/DeepFusionMOT/raw/master/assets/Video_examples.gif)
 
 ## Dependencies
-- Ubuntu 20.04
+- Google Colab
 
 ## Getting Started
 
 #### *1. Clone the github repository.*
 
 ```
-git clone https://github.com/wangxiyang2022/DeepFusionMOT
+!git clone https://github.com/wangxiyang2022/DeepFusionMOT
 ```
 
 #### *2. Dataset preparation*
@@ -36,7 +29,7 @@ DeepFusionMOT
 ├── data
 │   ├── kitti
 │   │   │── tracking
-│   │   │   │──testing
+│   │   │   │──training
 |   │   │   │   ├──calib
 |   │   │   │   |    ├──0000.txt
 |   │   │   │   |    ├──....txt
@@ -57,42 +50,40 @@ DeepFusionMOT
 |   │   │   │   |    ├──0000
 |   │   │   │   |    ├──....
 |   │   │   │   |    └──0028  
-│   │   │   │──training  # the structure is same as testing set
+│   │   │   │──testing  # the structure is same as training set
 |   │   │   │   ├──calib
 |   │   │   │   ├──image_02
-|   │   │   │   ├──pose
+|   │   │   │   ├──oxts
 |   │   │   │   ├──label_02
 |   │   │   │   └──velodyne 
 ```
 
-#### *3. Install dependency*
+##### Here are some errors in the Kitti dataset. Some data in folder 0008 and 0009 of the training data do not conform to the format of this code, resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
+
+#### *3. mount google drive.*
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+#### *4. Install dependency*
 
 ```
-cd your_path/DeepFusionMOT
-pip install -r requirements.txt
+!pip install -r /content/drive/MyDrive/DeepFusionMOT/requirements.txt
 ```
 
+#### *5. Change files' path
+in main.py line 89
+```
+file_path = '/content/drive/MyDrive/DeepFusionMOT/results'```
 
-#### *4. 3D Object Detections & 2D Object Detections*
+in main.py line 96
+```
+default='/content/drive/MyDrive/DeepFusionMOT/config/kitti.yaml'```
 
-Thanks to these researchers for making their code public, in this repository, for convenience, we provide the 3D detections of PointRCNN and 2D detections of RRC on the KITTI MOT dataset for car. Of course you can also use the results of other detectors.
 
 
-- **For 3D detections**
-
-| Frame | Type |      2D BBOX (x1, y1, x2, y2)       | Score  |          3D BBOX (h, w, l, x, y, z, rot_y)          |  Alpha  |
-| :---: | :--: | :---------------------------------: | :----: | :-------------------------------------------------: | :-----: |
-|   0   |  2   | 298.3125,165.1800,458.2292,293.4391 | 8.2981 | 1.9605,1.8137,4.7549,-4.5720,1.8435,13.5308,-2.1125 | -1.7867 |
-
-- **For 2D detections**
-
-| Frame |          2D BBOX (x1, y1, x2, y2)           |  Score   |
-| :---: | :-----------------------------------------: | :------: |
-|   0   | 296.021000,160.173000,452.297000,288.372000 | 0.529230 |
-
-The format definition can be found in the object development toolkit here: https://github.com/JonathonLuiten/TrackEval/blob/master/docs/KITTI-format.txt
-
-#### *5. Run demo*
+#### *6. Run main.py*
 
 ```
 python main.py
