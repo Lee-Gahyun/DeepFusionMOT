@@ -14,8 +14,8 @@ This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object T
 - Google Colab
 - "[Our colab link](https://colab.research.google.com/drive/1SzuVFcqdtcjZpVlRX-SKjkDtJcwAHazI?usp=sharing)"
 
-## Modify file path
-If you want to modify file path for running this code, check
+## Modify File Path
+This code is setting path for my google drive, so if you want to modify file path for running this code, please check
 - config/kitti.yaml
 - main.py and main_test.py line 89 and line 96
 - utils/combine_trk_cat.py line 67
