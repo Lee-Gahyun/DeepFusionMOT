@@ -64,7 +64,7 @@ DeepFusionMOT
 
 NOTICE: Here are some errors in the Kitti dataset. Some data in folder 0008 and 0009 do not conform to the format of this code, and they are resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
 
-#### *3. mount google drive.*
+#### *3. Mount google drive.*
 ```
 from google.colab import drive
 drive.mount('/content/drive')
