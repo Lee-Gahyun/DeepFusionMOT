@@ -3,9 +3,9 @@
 This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object Tracking Framework Based on Camera-LiDAR Fusion with Deep Association](https://arxiv.org/abs/2202.12100) "
 
 
-### Video examples on benchmarks dataset
+## Examples of Output Images
 
-![Video examples](https://github.com/wangxiyang2022/DeepFusionMOT/raw/master/assets/Video_examples.gif)
+
 
 ## Dependencies
 - Google Colab
@@ -78,11 +78,12 @@ Using Training Datasets
 !python /content/drive/MyDrive/DeepFusionMOT/main.py
 ```
 And we can check the output images in 'DeepFusionMOT\results\KITTI\Car\image'
+NOTICE: Please save the result folder before run main_test.py
 
-#### *6. Evalu
 
 #### *6. Run main_test.py*
 Using Testing Datasets
 ```
 !python /content/drive/MyDrive/DeepFusionMOT/main_test.py
 ```
+Also we can check the output images in 'DeepFusionMOT\results\KITTI\Car\image'
