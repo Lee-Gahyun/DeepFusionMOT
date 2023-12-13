@@ -5,7 +5,7 @@ This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object T
 
 ## Examples of Output Images
 
-
+assets/ex_testing.png
 
 ## Dependencies
 - Google Colab
