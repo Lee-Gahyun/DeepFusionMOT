@@ -15,7 +15,7 @@ This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object T
 - "[Our colab link](https://colab.research.google.com/drive/1SzuVFcqdtcjZpVlRX-SKjkDtJcwAHazI?usp=sharing)"
 
 ## Modify File Path
-This code is set path for my google drive, so if you want to modify file path for running this code, please check
+This code is set path for my google drive, so if you want to modify file path for running this code, please check these:
 - config/kitti.yaml
 - main.py and main_test.py line 89 and line 96
 - utils/combine_trk_cat.py line 67
@@ -70,7 +70,7 @@ DeepFusionMOT
 |   │   │   │   └──velodyne 
 ```
 
-##### NOTICE: Here are some errors in the Kitti dataset. Some data in folder 0008 and 0009 do not conform to the format of this code, and they are resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
+##### NOTICE: Here are some errors in the Kitti dataset. Some data in folders 0008 and 0009 do not conform to the format of this code, and they are resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
 
 #### *3. Mount google drive.*
 ```
