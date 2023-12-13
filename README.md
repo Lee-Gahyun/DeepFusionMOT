@@ -12,6 +12,7 @@ This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object T
 
 ## Dependencies
 - Google Colab
+- "[Our colab link](https://colab.research.google.com/drive/1SzuVFcqdtcjZpVlRX-SKjkDtJcwAHazI?usp=sharing)"
 
 ## Getting Started
 
