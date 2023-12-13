@@ -1,6 +1,3 @@
-# News
-## This paper has been accepted as both  a journal paper in Robotics and Automation Letters (RA-L), as well as being accepted as a conference paper at IROS 2022!!!
-
 # DeepFusionMOT
 
 This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object Tracking Framework Based on Camera-LiDAR Fusion with Deep Association](https://arxiv.org/abs/2202.12100) "
@@ -8,18 +5,6 @@ This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object T
 
 ![HOTA-FPS](https://github.com/wangxiyang2022/DeepFusionMOT/raw/master/assets/HOTA_FPS.jpg)
 
-## Update
-* (2022/6/21)This paper has been accepted as a journal paper in Robotics and Automation Letters (RA-L).
-* (2022/7/31)This paper has been accepted as a conference paper in IROS 2022.
-* (2022/10/25)Online presentation on IROS2022.
-* (2022/11/6)Another article"[StrongFusionMOT](https://ieeexplore.ieee.org/abstract/document/9976946/)" based on DeepFusionMOT improvement was accepted by IEEE Sensors Journal.
-* (2023/4/28)The code has been refactored and different cost functions have been introduced, resulting in further improvement in performance.
-
-## Abstract
-
-In the recent literature, on the one hand, many 3D multi-object tracking (MOT) works have focused on tracking accuracy and neglected computation speed, commonly by designing rather complex cost functions and feature extractors. On the other hand, some methods have focused too much on computation speed at the expense of tracking accuracy. In view of these issues, this paper proposes a robust and fast camera-LiDAR fusion-based MOT method that achieves a good trade-off between accuracy and speed. Relying on the characteristics of camera and LiDAR sensors, an effective deep association mechanism is designed and embedded in the proposed MOT method. This association mechanism realizes tracking of an object in a 2D domain when the object is far away and only detected by the camera, and updating of the 2D trajectory with 3D information obtained when the object appears in the LiDAR field of view to achieve a smooth fusion of 2D and 3D trajectories. Extensive experiments based on the KITTI dataset indicate that our proposed method presents obvious advantages over the state-of-the-art MOT methods in terms of both tracking accuracy and processing speed.
-
-![comparison](https://github.com/wangxiyang2022/DeepFusionMOT/raw/master/assets/comparison.jpg)
 
 ## DeepFusionMOT
 ![Framework](https://github.com/wangxiyang2022/DeepFusionMOT/raw/master/assets/Framework.jpg)
