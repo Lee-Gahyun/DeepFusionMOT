@@ -62,7 +62,7 @@ DeepFusionMOT
 |   │   │   │   └──velodyne 
 ```
 
-NOTICE: Here are some errors in the Kitti dataset. Some data in folder 0008 and 0009 do not conform to the format of this code, and they are resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
+##### NOTICE: Here are some errors in the Kitti dataset. Some data in folder 0008 and 0009 do not conform to the format of this code, and they are resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
 
 #### *3. Mount google drive.*
 ```
@@ -83,7 +83,7 @@ Using Training Datasets
 ```
 And we can check the output images in 'DeepFusionMOT\results\KITTI\Car\image'
 
-NOTICE: Please save the result folder before run main_test.py
+##### NOTICE: Please save the result folder before run main_test.py
 
 
 #### *6. Run main_test.py*
