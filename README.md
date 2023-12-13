@@ -4,7 +4,10 @@ This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object T
 
 
 ## Examples of Output Images
+Training data
 <img src="https://github.com/Lee-Gahyun/DeepFusionMOT/blob/master/assets/ex_training.png">
+
+Testing data
 <img src="https://github.com/Lee-Gahyun/DeepFusionMOT/blob/master/assets/ex_testing.png">
 
 ## Dependencies
