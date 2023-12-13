@@ -14,6 +14,14 @@ This is the offical implementation of paper "[DeepFusionMOT: A 3D Multi-Object T
 - Google Colab
 - "[Our colab link](https://colab.research.google.com/drive/1SzuVFcqdtcjZpVlRX-SKjkDtJcwAHazI?usp=sharing)"
 
+## Modify file path
+If you want to modify file path for running this code, check
+- config/kitti.yaml
+- main.py and main_test.py line 89 and line 96
+- utils/combine_trk_cat.py line 67
+- evaluation/KITTI/evaluation_HOTA/trackeval/datasets/kitti_2d_box.py line 22
+- utils/save_results.py line 47
+
 ## Getting Started
 
 #### *1. Clone the github repository.*
