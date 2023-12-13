@@ -58,7 +58,7 @@ DeepFusionMOT
 |   │   │   │   └──velodyne 
 ```
 
-##### Here are some errors in the Kitti dataset. Some data in folder 0008 and 0009 of the training data do not conform to the format of this code, resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
+##### Here are some errors in the Kitti dataset. Some data in folder 0008 and 0009 do not conform to the format of this code, resulting in errors. Therefore, we copied folder 0000 and 0006 and replaced folders 0008 and 0009 when we executed.
 
 #### *3. mount google drive.*
 ```
@@ -72,50 +72,17 @@ drive.mount('/content/drive')
 !pip install -r /content/drive/MyDrive/DeepFusionMOT/requirements.txt
 ```
 
-#### *5. Change files' path
-in main.py line 89
+#### *5. Run main.py*
+Using Training Datasets
 ```
-file_path = '/content/drive/MyDrive/DeepFusionMOT/results'```
-
-in main.py line 96
+!python /content/drive/MyDrive/DeepFusionMOT/main.py
 ```
-default='/content/drive/MyDrive/DeepFusionMOT/config/kitti.yaml'```
+And we can check the output images in 'DeepFusionMOT\results\KITTI\Car\image'
 
+#### *6. Evalu
 
-
-#### *6. Run main.py*
-
+#### *6. Run main_test.py*
+Using Testing Datasets
 ```
-python main.py
-```
-
-
-#### *6. KITTI MOT Evaluation*
-
-If you want to evaluate the tracking results using the evaluation tool on the KITTI website, you will need to go https://github.com/JonathonLuiten/TrackEval to download the evaluation code and follow the appropriate steps to set.
-
-Using  3D detections of PointRCNN  and 2D detections of RRC,  the following results will be obtained.
-
-|                      | HOAT( **↑)** | **DetA( **↑)**** | **AssA**(**↑)** | IDSW（↓） | MOTP(**↑)** | MOTA(**↑)** | FPS（↑） |
-| :------------------: | :----------: | :--------------: | :-------------: | :-------: | :---------: | :---------: | :------: |
-| **Training dataset** |    77.45%    |      75.35%      |     79.85%      |    83     |   86.60%    |   87.28%    |   104    |
-| **Testing dataset**  |    75.46%    |      71.54%      |     80.05%      |    84     |   85.02%    |   84.63%    |   110    |
-
-### Acknowledgement
-
-A portion  code is borrowed from [AB3DMOT](https://github.com/xinshuoweng/AB3DMOT) and [Deepsort](https://github.com/nwojke/deep_sort), and the visualization code from [3D-Detection-Tracking-Viewer](https://github.com/hailanyi/3D-Detection-Tracking-Viewer).  Many thanks to their wonderful work!
-
-
-### Citation
-
-
-If you find this work useful, please consider to cite our paper:
-
-```
-@ARTICLE{9810346,  
-author={Wang, Xiyang and Fu, Chunyun and Li, Zhankun and Lai, Ying and He, Jiawei},  
-journal={IEEE Robotics and Automation Letters},   
-title={DeepFusionMOT: A 3D Multi-Object Tracking Framework Based on Camera-LiDAR Fusion With Deep Association},   
-year={2022},  volume={7},  number={3},  pages={8260-8267},  doi={10.1109/LRA.2022.3187264}}
-
+!python /content/drive/MyDrive/DeepFusionMOT/main_test.py
 ```
